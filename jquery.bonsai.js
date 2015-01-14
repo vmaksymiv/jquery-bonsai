@@ -177,6 +177,7 @@
     },
     insertCheckbox: function(listItem) {
       if (listItem.find('> input[type=checkbox]').length) return;
+      if (!listItem.data('value')) return;
       var id = this.checkboxId(listItem),
           checkbox = $('<input type="checkbox" name="'
             + this.getCheckboxName(listItem) + '" id="' + id + '" /> '
